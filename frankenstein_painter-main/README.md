@@ -1,0 +1,1 @@
+This package can communicate with the linear unit. It needs to be installed on the surface laptop. Check the [Frankenstein installation instructions](https://git.igd-r.fraunhofer.de/sot/uwmaintenance/frankenstein/-/blob/main/README.md#installing-frankenstein) for more information on how to do that.

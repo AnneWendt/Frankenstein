@@ -1,0 +1,1 @@
+This package is part of the frankenstein software and needs to be installed on the Raspberry Pi companion computer. Check the [Frankenstein installation instructions](https://git.igd-r.fraunhofer.de/sot/uwmaintenance/frankenstein/-/blob/main/README.md#installing-frankenstein) for more information on how to do that.

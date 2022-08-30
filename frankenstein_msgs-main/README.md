@@ -1,0 +1,1 @@
+This package is an interface to communicate with the crawler motor control and the linear unit. It needs to be installed on both the surface laptop and on the Pi. Check the [Frankenstein installation instructions](https://git.igd-r.fraunhofer.de/sot/uwmaintenance/frankenstein/-/blob/main/README.md#installing-frankenstein) for more information on how to do that.

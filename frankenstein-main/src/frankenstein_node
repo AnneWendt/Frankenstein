@@ -1,0 +1,12 @@
+#!/usr/bin/env python
+
+from frankenstein import Frankenstein
+
+if __name__ == '__main__':
+    """
+    This is the starting point. We create a new instance of Frankenstein
+    and only start operating if the initialisation was successful.
+    """
+    frankenstein = Frankenstein()
+    if frankenstein.init_successful:
+        frankenstein.run()

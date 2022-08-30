@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- set a few default parameters -->
+    <!-- usually, the controller connects as js2 -->
+    <arg name="joy_dev" default="/dev/input/js2"/>
+    <!-- this one's important (see http://wiki.ros.org/joy#Parameters) -->
+    <arg name="trig_val" default="true"/>
+    <!-- we generally want to log to the screen -->
+    <arg name="log_output" default="screen"/>
+    <!-- this needs to be the same as on pi -->
+    <!-- check /home/pi/gstreamer2-extra.param -->
+    <arg name="udp_video_port" default="5610"/>
+    
+    <!-- start joystick driver -->
+    <node pkg="joy" type="joy_node" name="joy" output="$(arg log_output)">
+        <param name="dev" type="string" value="$(arg joy_dev)"/>
+        <param name="default_trig_val" type="bool" value="$(arg trig_val)"/>
+    </node>
+
+    <!-- start painter -->
+    <node pkg="frankenstein_painter" type="frankenstein_painter.py" name="this_is_painter" output="$(arg log_output)"></node>
+
+    <!-- start frankenstein node -->
+    <node pkg="frankenstein" type="frankenstein_node" name="this_is_frankenstein" output="$(arg log_output)">
+        <param name="udp_video_port" value="$(arg udp_video_port)"/>
+    </node>
+    
+</launch>
